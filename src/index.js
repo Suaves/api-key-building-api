@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 
 import "./styles.css";
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -53,7 +54,9 @@ class App extends React.Component {
                 <h6> {item.title}</h6>
               </a>
               <p>{item.content}</p>
-              <span>{item.pubDate}</span>
+              <span>
+                {item.pubDate} {this.props.name}
+              </span>
             </li>
           ))}
         </ul>
@@ -63,4 +66,4 @@ class App extends React.Component {
 }
 
 const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+ReactDOM.render(<App name="alexson seraus" />, rootElement);
